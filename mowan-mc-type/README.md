@@ -4,8 +4,6 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-**公众号：墨玩AI** · **License：MIT**
-
 ---
 
 ## ✨ 这是什么
