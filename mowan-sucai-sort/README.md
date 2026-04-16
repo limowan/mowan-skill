@@ -31,14 +31,15 @@
 
 ### 安装
 
-```bash
-# 使用 Claude Code 安装
-claude skill add mowan-sucai-sort
-```
+告诉你的 AI 助手：
+
+> 帮我安装一下 https://github.com/limowan/mowan-skill/tree/main/mowan-sucai-sort 这个 Skill
+
+支持 Claude Code、Cursor 或其他兼容的 AI 编程工具。
 
 ### 使用方法
 
-在 Claude Code 中输入：
+安装后，在对话中输入：
 
 ```
 整理素材
@@ -246,16 +247,7 @@ claude skill add mowan-sucai-sort
 
 ## 关于作者
 
-<table>
-<tr>
-<td width="80">
-<img src="https://raw.githubusercontent.com/limowan/mowan-mc-type/main/avatar.png" width="60" style="border-radius: 50%;" alt="墨玩AI">
-</td>
-<td>
-<strong>墨玩AI</strong> — 独立开发者，和你一起探索 AI 在生活中的有趣用法 🌱
-</td>
-</tr>
-</table>
+**墨玩AI** — 独立开发者，和你一起探索 AI 在生活中的有趣用法 🌱
 
 > 积累了很多素材却找不到，这个困扰了我很久。所以我做了这个工具——希望素材整理不再是负担，而是知识管理的起点。
 
@@ -280,9 +272,3 @@ claude skill add mowan-sucai-sort
 ## License
 
 MIT License
-
----
-
-## 致谢
-
-感谢 [Claude Code](https://claude.ai/code) 让这一切成为可能。
