@@ -263,6 +263,7 @@
 | 平台 | 链接 |
 |------|------|
 | 📕 小红书 | [墨玩AI](https://xhslink.com/m/3Ks23mHtPrL) |
+| 📺 B站 | [墨玩AI](https://space.bilibili.com/696270041) |
 | 💬 公众号 | 微信搜「墨玩AI」 |
 
 <img src="https://raw.githubusercontent.com/limowan/mowan-mc-type/main/wechat_qrcode.jpg" width="300" alt="墨玩AI 公众号二维码">
