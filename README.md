@@ -85,6 +85,26 @@
 
 ---
 
+### 5. mowan-CTI（墨玩CTI人格侧写）
+
+**功能**：通过分析聊天记录，将你归类到 12 种聊天人格中的一种
+
+**特点**：
+- 12 种独特聊天人格分类（改改改改、凌晨三点兽、散装弹珠、随便侠等）
+- 三种测评模式：复制提示词分析、聊天记录导入、AI 记忆导入
+- 支持飞书、钉钉、微信、Slack 等多种数据来源
+- 所有数据本地处理，不上传任何服务器
+- 生成毒舌风格的人格结果页
+
+**使用场景**：聊天人格测评、团队破冰、娱乐社交
+
+**安装**：
+```
+帮我安装一下 https://github.com/limowan/mowan-skill/tree/main/mowan-CTI 这个 Skill
+```
+
+---
+
 ## 📊 Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=limowan/mowan-skill&type=Date)](https://star-history.com/#limowan/mowan-skill&Date)
@@ -105,6 +125,7 @@
 | 🗂️ 墨玩素材整理 | 自动整理素材库 | [mowan-sucai-sort](https://github.com/limowan/mowan-skill/tree/main/mowan-sucai-sort) |
 | ✍️ 墨玩内容创作 | 热帖分析与素材挖掘 | [mowan-content-creator](https://github.com/limowan/mowan-skill/tree/main/mowan-content-creator) |
 | 📈 大道投研 | 段永平投资决策框架 | [mowan-dadao-touyan](https://github.com/limowan/mowan-skill/tree/main/mowan-dadao-touyan) |
+| 🎭 墨玩CTI人格侧写 | 聊天人格测评系统 | [mowan-CTI](https://github.com/limowan/mowan-skill/tree/main/mowan-CTI) |
 
 ### 关注我
 
