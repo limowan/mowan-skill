@@ -105,6 +105,25 @@
 
 ---
 
+### 6. mowan-video-explainer（墨玩视频解读）
+
+**功能**：将技术报告、产品文档、文章等内容转化为科普/解读视频
+
+**特点**：
+- 自动选择工具链（Manim / HyperFrames / Remotion）
+- 支持 AI 生成脚本或用户自己提供（带时间戳更佳）
+- TTS 自动配音 + 真人录音两种模式
+- 从脚本到动画到合成，全流程 AI 辅助
+
+**使用场景**：技术科普、产品介绍、文章解读、Skill 演示
+
+**安装**：
+```
+帮我安装一下 https://github.com/limowan/mowan-skill/tree/main/mowan-video-explainer 这个 Skill
+```
+
+---
+
 ## 📊 Star History
 
 [![Star History Chart](https://api.star-history.com/svg?repos=limowan/mowan-skill&type=Date)](https://star-history.com/#limowan/mowan-skill&Date)
@@ -126,6 +145,7 @@
 | ✍️ 墨玩内容创作 | 热帖分析与素材挖掘 | [mowan-content-creator](https://github.com/limowan/mowan-skill/tree/main/mowan-content-creator) |
 | 📈 大道投研 | 段永平投资决策框架 | [mowan-dadao-touyan](https://github.com/limowan/mowan-skill/tree/main/mowan-dadao-touyan) |
 | 🎭 墨玩CTI人格侧写 | 聊天人格测评系统 | [mowan-CTI](https://github.com/limowan/mowan-skill/tree/main/mowan-CTI) |
+| 🎬 墨玩视频解读 | 素材→科普/解读视频 | [mowan-video-explainer](https://github.com/limowan/mowan-skill/tree/main/mowan-video-explainer) |
 
 ### 关注我
 
