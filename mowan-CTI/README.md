@@ -217,29 +217,25 @@ MIT License © [墨玩AI](https://github.com/limowan)
 
 ## 👋 关于作者
 
-**墨玩AI** — 独立开发者，和你一起探索 AI 在生活中的有趣用法。
+**墨玩AI** — 独立开发者，和你一起探索 AI 在生活中的有趣用法 🌱
 
-<table>
-  <thead>
-    <tr>
-      <th style="background-color: #f8fafc; text-align: left; width: 110px; border-bottom: 2px solid #e5e7eb; padding: 8px 12px;">平台</th>
-      <th style="background-color: #f8fafc; text-align: left; border-bottom: 2px solid #e5e7eb; padding: 8px 12px;">链接</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="font-weight: 500; border: 1px solid #e5e7eb; padding: 8px 12px;">📕 小红书</td>
-      <td style="border: 1px solid #e5e7eb; padding: 8px 12px;"><a href="https://xhslink.com/m/3Ks23mHtPrL" target="_blank">墨玩AI</a></td>
-    </tr>
-    <tr>
-      <td style="font-weight: 500; border: 1px solid #e5e7eb; padding: 8px 12px;">📺 B站</td>
-      <td style="border: 1px solid #e5e7eb; padding: 8px 12px;"><a href="https://space.bilibili.com/696270041" target="_blank">墨玩AI</a></td>
-    </tr>
-    <tr>
-      <td style="font-weight: 500; border: 1px solid #e5e7eb; padding: 8px 12px;">💬 公众号</td>
-      <td style="border: 1px solid #e5e7eb; padding: 8px 12px;">微信搜「墨玩AI」或扫码关注 ↓</td>
-    </tr>
-  </tbody>
-</table>
+> 你以为自己是"随便侠"？你的聊天记录可不这么说。
+
+### 我的产品
+
+| 产品 | 说明 | 使用方式 |
+|------|------|----------|
+| 🌐 墨成AI排版 | AI 快捷公众号文章排版工具 | [mocheng.mowan.work](https://mocheng.mowan.work) |
+| 📱 问问毛选 | 毛选语录抽卡，真正的答案之书 | 微信搜「问问毛选」或扫码👇 |
+
+<img src="../问问毛选小程序.png" width="160" alt="问问毛选小程序二维码">
+
+### 关注我
+
+| 平台 | 链接 |
+|------|------|
+| 📕 小红书 | [墨玩AI](https://xhslink.com/m/3Ks23mHtPrL) |
+| 📺 B站 | [墨玩AI](https://space.bilibili.com/696270041) |
+| 💬 公众号 | 微信搜「墨玩AI」 |
 
 <img src="https://raw.githubusercontent.com/limowan/mowan-mc-type/main/wechat_qrcode.jpg" alt="墨玩AI 公众号二维码" width="200" />

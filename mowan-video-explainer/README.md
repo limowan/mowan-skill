@@ -168,10 +168,23 @@ MIT License
 
 **墨玩AI** — 独立开发者，和你一起探索 AI 在生活中的有趣用法 🌱
 
+> 好内容不该只躺在文档里，做成视频让更多人看懂。
+
+### 我的产品
+
+| 产品 | 说明 | 使用方式 |
+|------|------|----------|
+| 🌐 墨成AI排版 | AI 快捷公众号文章排版工具 | [mocheng.mowan.work](https://mocheng.mowan.work) |
+| 📱 问问毛选 | 毛选语录抽卡，真正的答案之书 | 微信搜「问问毛选」或扫码👇 |
+
+<img src="../问问毛选小程序.png" width="160" alt="问问毛选小程序二维码">
+
+### 关注我
+
 | 平台 | 链接 |
 |------|------|
 | 📕 小红书 | [墨玩AI](https://xhslink.com/m/3Ks23mHtPrL) |
 | 📺 B站 | [墨玩AI](https://space.bilibili.com/696270041) |
 | 💬 公众号 | 微信搜「墨玩AI」 |
 
-<img src="https://raw.githubusercontent.com/limowan/mowan-mc-type/main/wechat_qrcode.jpg" width="300" alt="墨玩AI 公众号二维码">
+<img src="https://raw.githubusercontent.com/limowan/mowan-mc-type/main/wechat_qrcode.jpg" width="200" alt="墨玩AI 公众号二维码">

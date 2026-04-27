@@ -124,19 +124,22 @@
 
 ---
 
-## 📊 Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=limowan/mowan-skill&type=Date)](https://star-history.com/#limowan/mowan-skill&Date)
-
----
-
 ## 💬 关于作者
 
 **墨玩AI** — 独立开发者，和你一起探索 AI 在生活中的有趣用法 🌱
 
 > 这里收集了我为提升创作效率打造的 AI 工具。每一个都源于真实的使用场景，希望它们也能帮到你。
 
-### 我的作品
+### 我的产品
+
+| 产品 | 说明 | 使用方式 |
+|------|------|----------|
+| 🌐 墨成AI排版 | AI 快捷公众号文章排版工具 | [mocheng.mowan.work](https://mocheng.mowan.work) |
+| 📱 问问毛选 | 毛选语录抽卡，真正的答案之书 | 微信搜「问问毛选」或扫码👇 |
+
+<img src="问问毛选小程序.png" width="160" alt="问问毛选小程序二维码">
+
+### 我的 Skill
 
 | 项目 | 说明 | 链接 |
 |------|------|------|
@@ -162,3 +165,9 @@
 ## 📄 License
 
 MIT License
+
+---
+
+## 📊 Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=limowan/mowan-skill&type=Date)](https://star-history.com/#limowan/mowan-skill&Date)

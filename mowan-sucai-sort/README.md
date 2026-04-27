@@ -251,12 +251,14 @@
 
 > 积累了很多素材却找不到，这个困扰了我很久。所以我做了这个工具——希望素材整理不再是负担，而是知识管理的起点。
 
-### 我的其他作品
+### 我的产品
 
-| 项目 | 说明 | 链接 |
-|------|------|------|
-| 🎨 墨成AI排版 | 将 Markdown 转为精美公众号排版 | [GitHub](https://github.com/limowan/mowan-mc-type) |
-| 🗂️ 墨玩素材整理 | 自动整理素材库，建立分类索引 | 本仓库 |
+| 产品 | 说明 | 使用方式 |
+|------|------|----------|
+| 🌐 墨成AI排版 | AI 快捷公众号文章排版工具 | [mocheng.mowan.work](https://mocheng.mowan.work) |
+| 📱 问问毛选 | 毛选语录抽卡，真正的答案之书 | 微信搜「问问毛选」或扫码👇 |
+
+<img src="../问问毛选小程序.png" width="160" alt="问问毛选小程序二维码">
 
 ### 关注我
 
@@ -266,7 +268,7 @@
 | 📺 B站 | [墨玩AI](https://space.bilibili.com/696270041) |
 | 💬 公众号 | 微信搜「墨玩AI」 |
 
-<img src="https://raw.githubusercontent.com/limowan/mowan-mc-type/main/wechat_qrcode.jpg" width="300" alt="墨玩AI 公众号二维码">
+<img src="https://raw.githubusercontent.com/limowan/mowan-mc-type/main/wechat_qrcode.jpg" width="200" alt="墨玩AI 公众号二维码">
 
 ---
 

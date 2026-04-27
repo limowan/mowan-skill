@@ -113,16 +113,16 @@
 
 **墨玩AI** — 独立开发者，和你一起探索 AI 在生活中的有趣用法 🌱
 
-> 这里收集了我为提升创作效率打造的 AI 工具。每一个都源于真实的使用场景，希望它们也能帮到你。
+> 投资决策最怕拍脑袋，所以我把段永平的框架做成了检查清单——让每一次判断都有迹可循。
 
-### 我的作品
+### 我的产品
 
-| 项目 | 说明 | 链接 |
-|------|------|------|
-| 🎨 墨成AI排版 | Markdown 转公众号排版 | [mowan-mc-type](https://github.com/limowan/mowan-skill/tree/main/mowan-mc-type) |
-| 🗂️ 墨玩素材整理 | 自动整理素材库 | [mowan-sucai-sort](https://github.com/limowan/mowan-skill/tree/main/mowan-sucai-sort) |
-| ✍️ 墨玩内容创作 | 热帖分析与素材挖掘 | [mowan-content-creator](https://github.com/limowan/mowan-skill/tree/main/mowan-content-creator) |
-| 📈 大道投研 | 段永平投资决策框架 | [mowan-dadao-touyan](https://github.com/limowan/mowan-skill/tree/main/mowan-dadao-touyan) |
+| 产品 | 说明 | 使用方式 |
+|------|------|----------|
+| 🌐 墨成AI排版 | AI 快捷公众号文章排版工具 | [mocheng.mowan.work](https://mocheng.mowan.work) |
+| 📱 问问毛选 | 毛选语录抽卡，真正的答案之书 | 微信搜「问问毛选」或扫码👇 |
+
+<img src="../问问毛选小程序.png" width="160" alt="问问毛选小程序二维码">
 
 ### 关注我
 
@@ -132,13 +132,7 @@
 | 📺 B站 | [墨玩AI](https://space.bilibili.com/696270041) |
 | 💬 公众号 | 微信搜「墨玩AI」 |
 
-<img src="https://raw.githubusercontent.com/limowan/mowan-mc-type/main/wechat_qrcode.jpg" width="300" alt="墨玩AI 公众号二维码">
-
----
-
-## Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=limowan/mowan-skill&type=Date)](https://star-history.com/#limowan/mowan-skill&Date)
+<img src="https://raw.githubusercontent.com/limowan/mowan-mc-type/main/wechat_qrcode.jpg" width="200" alt="墨玩AI 公众号二维码">
 
 ---
 
