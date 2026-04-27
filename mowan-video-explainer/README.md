@@ -17,9 +17,10 @@
 <tr><td align="left">
 
 🎯 &nbsp;输入一篇技术报告/产品文档/文章，输出一个完整的科普视频<br>
-🤖 &nbsp;自动选择最合适的工具链（Manim / HyperFrames / Remotion）<br>
+🎨 &nbsp;先出 2-3 个视频方案对比，确认后再制作<br>
+🤖 &nbsp;AI 自由选择工具和创造动效，不限于固定模板<br>
 🎙️ &nbsp;支持 TTS 自动配音和真人录音两种模式<br>
-📐 &nbsp;从脚本到动画到合成，全流程 AI 辅助
+📐 &nbsp;从方案设计到脚本到动画到合成，全流程 AI 辅助
 
 </td></tr>
 </table>
@@ -36,10 +37,12 @@
 
 - **素材分析**：读取 PDF、文章、文档，提取核心内容和结构
 - **智能选型**：根据内容类型自动推荐最合适的视频工具组合
+- **方案对比**：出 2-3 个差异明显的视频方案，用户选择或混搭后再制作
 - **脚本生成**：AI 生成完整逐字稿（旁白 + 画面描述 + 时间轴），也支持用户自己提供
-- **动画制作**：自动生成 Manim/HyperFrames/Remotion 代码并渲染
+- **动画制作**：自动生成 Manim/HyperFrames/Remotion/HTML/GSAP/SVG/Three.js 等动画并渲染
 - **配音处理**：TTS 自动配音（edge-tts）或真人录音匹配（Whisper 转写）
-- **视频合成**：FFmpeg 合并视频、音频、字幕、BGM，输出终版
+- **GPU 渲染**：Windows + NVIDIA 优先使用 FFmpeg NVENC，MacBook 优先使用 Remotion 硬件加速
+- **视频合成**：FFmpeg 合并视频、音频、字幕、BGM，画质优先输出终版
 
 ## 🎯 适用场景
 
@@ -77,11 +80,12 @@ Skill 会引导你完成以下流程：
 
 1. **环境检测** — 自动检查依赖，缺什么装什么
 2. **素材分析** — 读取你的素材，推荐视频类型和工具
-3. **创建项目** — 在视频工作区建好目录结构
-4. **写脚本** — AI 生成或你自己提供，支持带时间戳格式
-5. **做动画** — 逐段生成动画代码并渲染
-6. **配音** — TTS 自动生成或真人录音匹配
-7. **合成** — 拼接视频+音频+字幕+BGM，输出终版
+3. **视频方案设计** — 出 2-3 个方案对比（视觉风格、动效策略、工具组合），你选一个或混搭
+4. **创建项目** — 在视频工作区建好目录结构
+5. **写脚本** — AI 生成或你自己提供，支持带时间戳格式
+6. **做动画** — 逐段生成动画代码并渲染
+7. **配音处理** — TTS/真人录音 + 字幕生成
+8. **合成终版** — 视频+音频+BGM+字幕，输出终版
 
 ## 🔧 工具链
 
@@ -92,8 +96,20 @@ Skill 会根据视频类型自动选择工具：
 | **Manim** | 算法动画、数学可视化、技术原理 | 论文解读、技术科普 |
 | **HyperFrames** | 图文视频、标题卡、转场、字幕 | 文章解读、产品演示 |
 | **Remotion** | React 组件化视频、品牌化、批量生成 | 产品宣传片、系列视频 |
+| **HTML / GSAP / SVG** | 特效片头、打字机、聚光灯、SVG 组装 | 金句揭示、Logo reveal、动效素材 |
+| **Three.js / Canvas** | 3D、程序化背景、循环视觉 | 抽象隐喻、氛围 B-roll |
 
-三种工具可以混合使用。比如技术科普视频：Manim 做核心动画 + HyperFrames 做开场和结尾。
+工具可以混合使用。比如技术科普视频：Manim 做核心动画 + Remotion 做主片 + HTML/GSAP 做标题 reveal 和 SVG 组装特效。
+
+## 🎬 视频设计原则
+
+默认方向是：给小白看，短视频感强，有记忆点，有趣但不标题党。
+
+- 开头 5-10 秒必须有 Hook，让观众知道为什么值得看。
+- 每支视频至少设计 1 个核心比喻、1 句可复述金句、1 个视觉锚点。
+- Remotion 不是 PPT 翻页工具，要主动设计构图、转场、字幕节奏和视觉系统。
+- 动效从内容需求出发设计，AI 自由选择和创造，不限于固定模板。
+- 复杂内容拆成”问题 → 解释 → 例子 → 结论”，少术语，多大白话。
 
 ## 📋 依赖
 
@@ -113,8 +129,19 @@ Skill 会根据视频类型自动选择工具：
 | Remotion | 产品宣传片 | `npx create-video@latest` |
 | edge-tts | TTS 配音 | `pip install edge-tts` |
 | Whisper | 真人录音转字幕 | `pip install openai-whisper` |
+| GPU 硬件编码 | 加快最终 MP4 导出 | Windows + NVIDIA 使用 `h264_nvenc`；MacBook 使用 Remotion 硬件加速 |
 
 > Manim 需要 Python 3.12（3.14 不兼容）。如果系统有多个 Python 版本，用 `py -3.12` 指定。
+
+## ⚡ GPU 渲染策略
+
+默认优先画质：源片要清晰，文件大小适中即可，上传平台通常还会二次压缩。
+
+- Windows + NVIDIA：Remotion 生成画面，FFmpeg 使用 `h264_nvenc` 编码最终 MP4。
+- MacBook：Remotion 使用 `--hardware-acceleration=if-possible`。
+- 无可用 GPU：自动回退 CPU `libx264 -crf 18`。
+
+注意：不要把已经压好的最终 MP4 再二次转 GPU；应从高质量中间产物或帧序列一次性编码终版，避免字幕和细线变糊。
 
 ## 🎙️ 配音方案
 
@@ -136,6 +163,23 @@ Skill 会根据视频类型自动选择工具：
 
 ## 📁 项目结构
 
+Skill 自身结构：
+
+```
+mowan-video-explainer/
+├── SKILL.md                 ← Skill 入口（流程编排）
+├── README.md
+├── references/              ← 参考文档（按需读取）
+│   ├── effects-thinking.md  ← 动效设计思考框架
+│   ├── tool-manim.md        ← Manim 编码规范
+│   ├── tool-hyperframes.md  ← HyperFrames 编码规范
+│   ├── tool-remotion.md     ← Remotion 编码规范
+│   ├── tool-html-effects.md ← HTML/GSAP/SVG 特效规则
+│   └── rendering-and-encoding.md ← GPU + FFmpeg 编码
+├── templates/               ← 项目模板
+└── tools/                   ← 辅助脚本
+```
+
 每个视频项目自动创建标准目录：
 
 ```
@@ -146,10 +190,13 @@ Skill 会根据视频类型自动选择工具：
 │   └── remotion/        ← Remotion 项目
 ├── 素材/                ← 项目专属素材
 ├── 产物/
-│   ├── clips/           ← 各段渲染片段 + 音频
-│   └── final/           ← 最终合成视频
+│   ├── 视频片段/        ← 各段渲染片段
+│   ├── 配音文件/        ← TTS 或真人录音
+│   └── 最终视频/        ← 最终合成视频
 └── 项目说明.md
 ```
+
+业务文件夹使用中文；工具工程目录保持英文，例如 `源文件/remotion/`。
 
 ## 🔒 隐私与数据安全
 
