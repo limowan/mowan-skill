@@ -130,6 +130,7 @@ Skill 会根据视频类型自动选择工具：
 | edge-tts | TTS 配音 | `pip install edge-tts` |
 | Whisper | 真人录音转字幕 | `pip install openai-whisper` |
 | GPU 硬件编码 | 加快最终 MP4 导出 | Windows + NVIDIA 使用 `h264_nvenc`；MacBook 使用 Remotion 硬件加速 |
+| AI 生图能力 | 视频中的封面、背景、插图等图片素材 | Codex 用内置 `image_gen`；其它环境通过 `config.json` 配置生图 Skill |
 
 > Manim 需要 Python 3.12（3.14 不兼容）。如果系统有多个 Python 版本，用 `py -3.12` 指定。
 
@@ -169,6 +170,8 @@ Skill 自身结构：
 mowan-video-explainer/
 ├── SKILL.md                 ← Skill 入口（流程编排）
 ├── README.md
+├── config.example.json      ← 生图能力配置示例
+├── .gitignore
 ├── references/              ← 参考文档（按需读取）
 │   ├── effects-thinking.md  ← 动效设计思考框架
 │   ├── tool-manim.md        ← Manim 编码规范

@@ -44,6 +44,7 @@ allowed-tools: Read, Write, Edit, Bash, Glob, Grep, Agent, AskUserQuestion, Todo
 | `references/tool-html-effects.md` | HTML/GSAP/SVG/Three.js 特效制作规则 | 需要制作特效片段时 |
 | `references/rendering-and-encoding.md` | GPU 检测 + FFmpeg 编码参数 + 合成命令 | Step 1 环境检测 + Step 8 合成时 |
 | `references/preview-workflow.md` | 实时预览工作流（按工具 + 按环境） | Step 6 制作动画时 |
+| `config.example.json` | 生图能力配置示例 | Step 6 需要生成图片素材时 |
 
 ---
 
@@ -229,7 +230,16 @@ C. 混合模式 — 我先出初稿，你改完确认
 - 多用直观视觉语言，不要只把文字摆上去
 - 字幕和标题为小白服务：短句、强重点、可扫读
 - 工具可以混合使用，按效果和效率选
-- **边改边看**：读取 `references/preview-workflow.md`，根据当前环境（Codex / Claude 桌面端 / 本地）启动实时预览，不要盲写代码再渲染
+- **边改边看**：读取 `references/preview-workflow.md`，根据当前环境启动实时预览
+
+#### 图片素材生成
+
+视频制作中如需生成图片素材（封面、背景、插图、图标等），按环境选择生图方式：
+
+- **Codex 环境**：使用内置 `image_gen` 直接生成
+- **其它环境**：读取 `config.json`，调用 `imageGenerationSkills[]` 中配置的生图 Skill
+  - 如果 `config.json` 不存在，读取 `config.example.json`，引导用户复制并填写真实路径
+  - 如果配置的 Skill 不可用，检索当前环境其它可用的生图 Skill，让用户确认后使用
 
 每段渲染完后，检查时长是否匹配脚本预期。
 

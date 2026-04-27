@@ -1,0 +1,10 @@
+{
+  "defaultImageProvider": "codex_image_gen",
+  "imageGenerationSkills": [
+    {
+      "skillName": "你的生图Skill名称",
+      "skillPath": "D:/你的路径/skills/你的生图Skill",
+      "environments": ["claude_code", "other"]
+    }
+  ]
+}
