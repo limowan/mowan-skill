@@ -124,6 +124,26 @@
 
 ---
 
+### 7. mowan-secure-review（墨玩安全审计）
+
+**功能**：以攻击者视角对项目进行全面代码级安全审计
+
+**特点**：
+- 模拟精英渗透测试专家，找真实可利用的漏洞
+- 自动检测技术栈（PHP/Node/Python/Java/Go/移动端/小程序），动态加载对应攻击清单
+- 覆盖 OWASP Top 10、注入攻击、认证授权、密钥泄露、环境变量安全、业务逻辑、AI/LLM 安全
+- 攻击链分析：发现可串联的漏洞组合
+- 输出结构化报告，含攻击路径和修复建议
+
+**使用场景**：项目安全审计、上线前安全检查、渗透测试
+
+**安装**：
+```
+帮我安装一下 https://github.com/limowan/mowan-skill/tree/main/mowan-secure-review 这个 Skill
+```
+
+---
+
 ## 💬 关于作者
 
 **墨玩AI** — 独立开发者，和你一起探索 AI 在生活中的有趣用法 🌱
@@ -149,6 +169,7 @@
 | 📈 大道投研 | 段永平投资决策框架 | [mowan-dadao-touyan](https://github.com/limowan/mowan-skill/tree/main/mowan-dadao-touyan) |
 | 🎭 墨玩CTI人格侧写 | 聊天人格测评系统 | [mowan-CTI](https://github.com/limowan/mowan-skill/tree/main/mowan-CTI) |
 | 🎬 墨玩视频解读 | 素材→科普/解读视频 | [mowan-video-explainer](https://github.com/limowan/mowan-skill/tree/main/mowan-video-explainer) |
+| 🔐 墨玩安全审计 | 攻击者视角代码安全审计 | [mowan-secure-review](https://github.com/limowan/mowan-skill/tree/main/mowan-secure-review) |
 
 ### 关注我
 
