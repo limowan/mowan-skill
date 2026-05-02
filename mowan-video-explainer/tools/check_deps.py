@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 """
 依赖检测脚本 - 检查视频制作所需的工具是否已安装
-用法: python check_deps.py [--all | --manim | --hyperframes | --remotion | --tts | --whisper]
+用法: python check_deps.py [--all | --manim | --hyperframes | --remotion | --tts | --whisper | --gpu]
 不带参数时只检查必须依赖（FFmpeg）
 """
 import subprocess
 import sys
 import shutil
 import json
+import platform
 
 
 def check_command(cmd, version_flag="--version"):
@@ -52,6 +53,41 @@ def check_npm_package(package):
         return False, None
     except (FileNotFoundError, subprocess.TimeoutExpired):
         return False, None
+
+
+def check_ffmpeg_encoder(encoder_name):
+    """检查 FFmpeg 是否支持指定编码器"""
+    try:
+        result = subprocess.run(
+            ["ffmpeg", "-hide_banner", "-encoders"],
+            capture_output=True, text=True, timeout=10
+        )
+        encoders = (result.stdout or "") + (result.stderr or "")
+        return result.returncode == 0 and encoder_name in encoders
+    except (FileNotFoundError, subprocess.TimeoutExpired):
+        return False
+
+
+def get_windows_gpu_names():
+    """获取 Windows 显卡名称，用于判断是否有 NVIDIA"""
+    if platform.system() != "Windows":
+        return []
+
+    try:
+        result = subprocess.run(
+            [
+                "powershell",
+                "-NoProfile",
+                "-Command",
+                "Get-CimInstance Win32_VideoController | Select-Object -ExpandProperty Name",
+            ],
+            capture_output=True, text=True, timeout=10
+        )
+        if result.returncode != 0:
+            return []
+        return [line.strip() for line in result.stdout.splitlines() if line.strip()]
+    except (FileNotFoundError, subprocess.TimeoutExpired):
+        return []
 
 
 def find_python312():
@@ -135,6 +171,40 @@ def main():
         if not ok:
             install_hints.append("Whisper: pip install openai-whisper")
 
+    if check_all or "--gpu" in args:
+        system = platform.system()
+        nvenc_ok = check_ffmpeg_encoder("h264_nvenc")
+        gpu_names = get_windows_gpu_names()
+        has_nvidia_gpu = any("NVIDIA" in name.upper() for name in gpu_names)
+
+        if system == "Windows" and nvenc_ok and has_nvidia_gpu:
+            gpu_mode = "windows-nvidia-nvenc"
+            gpu_installed = True
+            encoder = "h264_nvenc"
+        elif system == "Darwin":
+            gpu_mode = "macbook-remotion-videotoolbox"
+            gpu_installed = True
+            encoder = "remotion --hardware-acceleration=if-possible"
+        else:
+            gpu_mode = "cpu-fallback"
+            gpu_installed = False
+            encoder = None
+
+        results["optional"]["gpu-encoding"] = {
+            "installed": gpu_installed,
+            "platform": system,
+            "mode": gpu_mode,
+            "encoder": encoder,
+            "gpu_names": gpu_names,
+            "h264_nvenc": nvenc_ok,
+        }
+
+        if not gpu_installed:
+            install_hints.append(
+                "GPU 编码: Windows + NVIDIA 需显卡驱动和带 h264_nvenc 的 FFmpeg；"
+                "MacBook 使用 Remotion --hardware-acceleration=if-possible；否则自动回退 CPU"
+            )
+
     # === 输出 ===
     print("=" * 50)
     print("视频制作依赖检测结果")
@@ -150,8 +220,8 @@ def main():
         print("\n【可选依赖】")
         for name, info in results["optional"].items():
             status = "✅" if info["installed"] else "⚠️"
-            ver = info.get("version", "") or ""
-            print(f"  {status} {name}: {ver}" if info["installed"] else f"  {status} {name}: 未安装")
+            detail = info.get("version") or info.get("encoder") or info.get("mode") or ""
+            print(f"  {status} {name}: {detail}" if info["installed"] else f"  {status} {name}: 未安装")
 
     if install_hints:
         print("\n【安装建议】")
