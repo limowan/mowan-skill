@@ -144,6 +144,25 @@
 
 ---
 
+### 8. mowan-CodeX_Session_Resume（Codex 会话恢复）
+
+**功能**：修复 Codex Desktop 切换账号/Provider 后会话列表消失的问题
+
+**特点**：
+- 只读诊断优先，先检查再修复
+- 三层同步修复：SQLite + JSONL 元数据 + 侧边栏索引
+- 双重确认机制，防止误改
+- 自动备份，支持完整回滚
+
+**使用场景**：切换账号登录、API Key、模型供应商后历史会话消失
+
+**安装**：
+```
+帮我安装一下 https://github.com/limowan/mowan-skill/tree/main/mowan-CodeX_Session_Resume 这个 Skill
+```
+
+---
+
 ## 💬 关于作者
 
 **墨玩AI** — 独立开发者，和你一起探索 AI 在生活中的有趣用法 🌱
@@ -170,6 +189,7 @@
 | 🎭 墨玩CTI人格侧写 | 聊天人格测评系统 | [mowan-CTI](https://github.com/limowan/mowan-skill/tree/main/mowan-CTI) |
 | 🎬 墨玩视频解读 | 素材→科普/解读视频 | [mowan-video-explainer](https://github.com/limowan/mowan-skill/tree/main/mowan-video-explainer) |
 | 🔐 墨玩安全审计 | 攻击者视角代码安全审计 | [mowan-secure-review](https://github.com/limowan/mowan-skill/tree/main/mowan-secure-review) |
+| 🔄 Codex 会话恢复 | 修复切换 Provider 后会话消失 | [mowan-CodeX_Session_Resume](https://github.com/limowan/mowan-skill/tree/main/mowan-CodeX_Session_Resume) |
 
 ### 关注我
 

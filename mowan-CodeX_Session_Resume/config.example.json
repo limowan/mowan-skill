@@ -1,0 +1,8 @@
+{
+  "codex_home": "~/.codex",
+  "backup_root": "~/.codex/backups",
+  "说明": {
+    "codex_home": "Codex 的数据目录。默认通常是 ~/.codex。如果你的 Codex 数据放在别处，请改成你的实际目录。",
+    "backup_root": "修复前备份文件放在哪里。建议放在 Codex 数据目录下的 backups 文件夹，也可以改成你自己指定的位置。"
+  }
+}
