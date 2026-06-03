@@ -1,0 +1,64 @@
+{
+  "_comment": "示例配置。复制为 config.json 后填写你自己的真实路径。config.json 不要提交到 GitHub。",
+  "_fieldDescriptions": {
+    "vaultRoot": "Obsidian Vault 根目录，只用于解析相对路径，不是图片输出目录。",
+    "defaultImageProvider": "默认生图方式。Codex 环境建议使用 codex_image_gen。",
+    "requiredSkills": "本 Skill 依赖的其它 Skill。缺失时要引导用户安装。",
+    "purpose": "依赖 Skill 的用途说明。",
+    "installUrl": "依赖 Skill 的安装来源。用户没有该 Skill 时，把这个链接给用户。",
+    "imageGenerationSkills": "非 Codex 环境可用的生图 Skill 列表。运行时先检查这些路径是否存在；不可用时再检索当前环境其它生图 Skill。",
+    "skillName": "生图 Skill 名称，用于告诉用户当前实际调用哪个 Skill。",
+    "skillPath": "生图 Skill 的本机路径。示例配置用占位路径，真实路径写入 config.json。",
+    "environments": "这个生图 Skill 适用的环境，例如 claude_code 或 other。",
+    "outputYearFolderFormat": "年份文件夹格式，默认 {YYYY}年。",
+    "outputMonthFolderFormat": "月份文件夹格式，默认 {M}月。{M} 不补零，{MM} 补零。",
+    "articleFolderFormat": "单篇文章文件夹格式，默认 {YYYY-MM-DD}-{文章标题}。",
+    "accounts": "公众号配置列表。每个公众号一项。",
+    "accountName": "公众号名称，会用于封面署名和识别结果提示。",
+    "pathMatchers": "用于从文章路径判断公众号的关键词列表。",
+    "needsCoverAvatar": "封面是否需要头像参考。正文配图永远不使用头像。",
+    "coverAvatarPath": "头像路径。只有 needsCoverAvatar=true 时需要填写。",
+    "appendFollowCard": "文章底部是否追加关注卡片。",
+    "followCardPath": "关注卡片路径。只有 appendFollowCard=true 时需要填写。",
+    "showAccountNameOnArticleImages": "正文配图右下角是否展示公众号名称，默认 false。只影响正文配图，不影响封面。",
+    "outputRoot": "该公众号生成图片的存放根目录。最终会在这里按 年份/日期-标题 建子目录。"
+  },
+  "vaultRoot": "D:/Your/Obsidian Vault",
+  "defaultImageProvider": "codex_image_gen",
+  "requiredSkills": [
+    {
+      "skillName": "baoyu-article-illustrator",
+      "purpose": "正文配图分析、插图位置识别和风格候选。",
+      "skillPath": "D:/Your/skills/baoyu-article-illustrator",
+      "installUrl": "https://github.com/JimLiu/baoyu-skills/blob/main/skills/baoyu-article-illustrator/SKILL.md"
+    }
+  ],
+  "imageGenerationSkills": [
+    {
+      "skillName": "your-image-generation-skill",
+      "skillPath": "D:/Your/skills/your-image-generation-skill",
+      "environments": [
+        "claude_code",
+        "other"
+      ]
+    }
+  ],
+  "outputYearFolderFormat": "{YYYY}年",
+  "outputMonthFolderFormat": "{M}月",
+  "articleFolderFormat": "{YYYY-MM-DD}-{文章标题}",
+  "accounts": [
+    {
+      "_comment": "示例公众号。按你的实际公众号复制并修改这一项。",
+      "accountName": "示例公众号",
+      "pathMatchers": [
+        "公众号文章/示例公众号/"
+      ],
+      "needsCoverAvatar": false,
+      "coverAvatarPath": "",
+      "appendFollowCard": true,
+      "followCardPath": "D:/Your/Obsidian Vault/00_公众号运营资料/示例公众号/引导关注卡片.jpg",
+      "showAccountNameOnArticleImages": false,
+      "outputRoot": "D:/Your/Obsidian Vault/00_公众号运营资料/示例公众号/示例公众号文章配图"
+    }
+  ]
+}

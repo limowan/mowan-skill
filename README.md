@@ -163,6 +163,27 @@
 
 ---
 
+### 9. mowan-wechat-article-picture（公众号文章配图）
+
+**功能**：给 Markdown 公众号草稿生成封面图和正文配图，按配置识别公众号，自动整理回文章
+
+**特点**：
+- 首次使用交互式配置向导，不需要手写 JSON
+- 从文章路径自动识别公众号账号
+- 封面图：2.35:1 电影宽屏比例，5 种配色库 + 2 套排版方案
+- 正文配图：复用 baoyu-article-illustrator 分析，3 个风格候选供选择
+- 支持 Codex 内置生图和 Claude Code 外部生图 Skill
+- 按配置决定头像、关注卡片、公众号署名
+
+**使用场景**：公众号文章配图全流程
+
+**安装**：
+```
+帮我安装一下 https://github.com/limowan/mowan-skill/tree/main/mowan-wechat-article-picture 这个 Skill
+```
+
+---
+
 ## 💬 关于作者
 
 **墨玩AI** — 独立开发者，和你一起探索 AI 在生活中的有趣用法 🌱
@@ -190,6 +211,7 @@
 | 🎬 墨玩视频解读 | 素材→科普/解读视频 | [mowan-video-explainer](https://github.com/limowan/mowan-skill/tree/main/mowan-video-explainer) |
 | 🔐 墨玩安全审计 | 攻击者视角代码安全审计 | [mowan-secure-review](https://github.com/limowan/mowan-skill/tree/main/mowan-secure-review) |
 | 🔄 Codex 会话恢复 | 修复切换 Provider 后会话消失 | [mowan-CodeX_Session_Resume](https://github.com/limowan/mowan-skill/tree/main/mowan-CodeX_Session_Resume) |
+| 🖼️ 公众号文章配图 | 封面+正文配图全流程 | [mowan-wechat-article-picture](https://github.com/limowan/mowan-skill/tree/main/mowan-wechat-article-picture) |
 
 ### 关注我
 

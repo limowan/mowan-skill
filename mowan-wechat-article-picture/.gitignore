@@ -1,0 +1,4 @@
+config.json
+*.local.json
+**/图片产物/
+**/提示词文件夹/
